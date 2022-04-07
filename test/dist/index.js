@@ -31255,7 +31255,7 @@ function getOpenMenuMessage() {
 }
 
 // ../../tools/sharedConfig.ts
-var env = "local";
+var env = "prod";
 var environments = {
   local: {
     api: "http://127.0.0.1:8787",
