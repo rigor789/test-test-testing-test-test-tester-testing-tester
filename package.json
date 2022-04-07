@@ -3,13 +3,16 @@
   "main": "app/app.ts",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "test": ""
+  },
   "dependencies": {
     "@nativescript/core": "~8.1.0",
     "nativescript-vue": "~2.9.0"
   },
   "devDependencies": {
     "@nativescript/webpack": "~5.0.0",
-    "@nativescript/preview-cli": "1.0.0",
+    "test": "file:./test",
     "@types/node": "~14.6.2",
     "nativescript-vue-template-compiler": "~2.9.0",
     "typescript": "~4.0.0",

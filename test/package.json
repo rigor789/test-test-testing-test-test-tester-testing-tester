@@ -1,0 +1,39 @@
+{
+  "name": "@nativescript/preview-cli",
+  "version": "1.0.0",
+  "license": "MIT",
+  "bin": "dist/index.js",
+  "files": [
+    "dist",
+    "!dist/test.*",
+    "nativescript.webpack.js"
+  ],
+  "scripts": {
+    "build": "esbuild --bundle --sourcemap --format=cjs --platform=node --external:@nativescript/webpack --outdir=dist ./src/index.ts",
+    "build.plugin": "esbuild --sourcemap --format=cjs --platform=node --outdir=dist ./src/NativeScriptPreviewWebpackPlugin.ts",
+    "dev": "yarn build --watch",
+    "dev.plugin": "yarn build.plugin --watch"
+  },
+  "dependencies": {
+    "fetch-blob": "^3.1.5",
+    "formdata-polyfill": "^4.0.10"
+  },
+  "devDependencies": {
+    "@nativescript/preview-protocol": "1.0.0",
+    "@nativescript/preview-cli-frontend": "1.0.0",
+    "@nativescript/webpack": "^5.0.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.21",
+    "@types/qrcode-terminal": "^0.12.0",
+    "ansi-colors": "^4.1.1",
+    "esbuild": "^0.14.27",
+    "express": "^4.17.3",
+    "form-data": "^4.0.0",
+    "memfs": "^3.3.0",
+    "mime-types": "^2.1.35",
+    "node-fetch": "^3.2.3",
+    "qrcode-terminal": "^0.12.0",
+    "typescript": "^4.6.2",
+    "ws": "^8.5.0"
+  }
+}
